@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discometix — a Discord-inspired profile cosmetics previewer by Ddeveloper.">
+  <title>Discometix — Profile Cosmetics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-glow glow-one"></div>
+  <div class="bg-glow glow-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Discometix home">
+      <span class="brand-mark">D</span>
+      <span>Discometix</span>
+    </a>
+    <nav>
+      <a href="#explore">Explore</a>
+      <a href="#preview">Preview</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="ghost-btn" id="randomizeTop">Randomize</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">DISCORD COSMETICS PREVIEWER</span>
+        <h1>Build your profile.<br><span>Make it yours.</span></h1>
+        <p>Explore an original, Discord-inspired cosmetics playground. Mix decorations, frames, effects and badges in one live preview.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#explore">Explore cosmetics <span>→</span></a>
+          <button class="secondary-btn" id="randomizeHero">Surprise me</button>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Live profile preview">
+        <div class="profile-banner"></div>
+        <div class="hero-avatar-wrap effect-stars">
+          <div class="hero-ring"></div>
+          <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Preview avatar">
+        </div>
+        <div class="hero-profile-info">
+          <div><strong>Alex</strong><span class="tag">#2048</span></div>
+          <p>Building cool things on the internet.</p>
+          <div class="mini-badges"><span>✦</span><span>◆</span><span>◈</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="preview">
+      <div class="workspace-head">
+        <div>
+          <span class="section-label">LIVE PREVIEW</span>
+          <h2>Your profile</h2>
+        </div>
+        <button class="icon-btn" id="resetBtn" title="Reset preview">↻ Reset</button>
+      </div>
+
+      <div class="preview-layout">
+        <aside class="profile-panel">
+          <div class="profile-banner selected-banner" id="previewBanner"></div>
+          <div class="profile-body">
+            <div class="avatar-stage" id="avatarStage">
+              <div class="effect-layer" id="effectLayer"></div>
+              <div class="decoration" id="decorationLayer"></div>
+              <img id="previewAvatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Profile avatar">
+            </div>
+            <div class="profile-name"><strong>Alex</strong><span class="status-dot"></span></div>
+            <div class="profile-handle">alex.dev</div>
+            <p class="profile-bio">Frontend developer · builder · coffee enjoyer</p>
+            <div class="profile-divider"></div>
+            <div class="profile-meta"><span>MEMBER SINCE</span><strong>Sep 2024</strong></div>
+            <div class="equipped" id="equippedList"></div>
+          </div>
+        </aside>
+
+        <div class="cosmetics-panel" id="explore">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-category="all">All</button>
+            <button class="tab" data-category="decoration">Decorations</button>
+            <button class="tab" data-category="frame">Frames</button>
+            <button class="tab" data-category="effect">Effects</button>
+            <button class="tab" data-category="badge">Badges</button>
+          </div>
+          <div class="toolbar">
+            <div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search cosmetics..." autocomplete="off"></div>
+            <span class="result-count" id="resultCount"></span>
+          </div>
+          <div class="cosmetics-grid" id="cosmeticsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <span class="section-label">BUILT FOR CREATORS</span>
+      <h2>A simple way to experiment with profile cosmetics.</h2>
+      <div class="feature-grid">
+        <article><span class="feature-icon">✦</span><h3>Live preview</h3><p>Every selection updates your profile instantly.</p></article>
+        <article><span class="feature-icon">⌕</span><h3>Quick discovery</h3><p>Search and filter a growing cosmetic catalog.</p></article>
+        <article><span class="feature-icon">◈</span><h3>Original design</h3><p>A clean visual system made for the Discometix project.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Discometix</span><span>Built by <a href="https://github.com/Ddeveloper-sr">Ddeveloper</a></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
